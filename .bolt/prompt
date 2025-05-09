@@ -1,0 +1,30 @@
+🚀 Phase 1: Project Initialization and Core Setup
+
+Set up a full-stack CRM project using Next.js + TypeScript + Supabase with the current Vuexy admin dashboard files already imported. Keep the folder structure unchanged. Configure Supabase with existing DB and storage, use environment variables for API keys, and connect authentication (Supabase Auth). Do not generate a new index.html or vite.config.ts — we are using Next.js routing.
+
+Implement the layout shell from Vuexy, and verify that login, sidebar, and dashboard routes render properly.
+📊 Phase 2: Clone Cloudonex Core Modules (CRM, Invoices, Clients, Quotes, Projects)
+
+Create core modules exactly like Cloudonex Business Suite 9: CRM, Invoices, Clients, Quotes, and Projects. Match field names and logic from Cloudonex. Reuse Vuexy card components, tables, and modals. Connect all modules to Supabase database tables using RPC or direct queries.
+
+Follow the current folder structure: create `/modules`, `/services`, `/pages`, and `/components` per feature. Make each module fully CRUD-capable using Supabase queries and ensure data is rendered in Vuexy UI cards and tables.
+💰 Phase 3: Advanced Cash Flow and POS System
+
+Add advanced cash flow management: track daily income, expenses, cash flow history, and visualizations. Create a POS module with barcode scanner input, product catalog, inventory control, and thermal receipt printing support.
+
+Use Vuexy dashboard charts for cash flow visualization. Inventory, barcode printing, and scanning must be handled using browser-friendly libraries. Integrate Supabase for stock and transaction data.
+🔧 Phase 4: Advanced Repair Management System (Mobile/Laptop/Desktop/iWatch/iPad)
+
+Create a module named "Repair Management" inside `/modules/repair`. It must support device types: mobile, laptop, desktop, iWatch, and iPad. Include repair tickets, status updates, customer details, technician assignment, photos, timeline, cost estimates, parts used, and device history.
+
+Support QR code generation per device or job. Follow Vuexy UI for listing and editing forms. Store all media in Supabase Storage and repair data in Supabase DB. Use clean routing and folder separation.
+💬 Phase 5: Centralized Communication (Email, SMS, WhatsApp) & Chat
+
+Create centralized templates for Email, SMS, and WhatsApp in `/settings/templates/`. Add template editor UI using Vuexy form components. Create a chat module that allows real-time chat between admin, staff, technician, and clients using Supabase Realtime or edge functions.
+
+Chat UI must use Vuexy's existing chat layout. Route and store messages securely in Supabase DB.
+📁 Phase 6: Task Management, Automation, and Role-Based Dashboards
+
+Build task manager with Kanban view, calendar, priority tags, and role assignments. Add business automation features (e.g., send email when invoice paid, notify when repair is done). Create distinct dashboards for admin, staff, technician, and client using Vuexy layout routing logic.
+
+Each dashboard must render different data cards but reuse the same component styling. Keep user role logic modular and use Supabase Auth claims for access control.
